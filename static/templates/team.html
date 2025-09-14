@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+
+        {% if data %}
+
+        <title>{{ data.title }}</title>
+        <meta name="description" content="{{ data.description }}">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    
+    {% else %}
+
+        <title>Slyce</title>
+        <meta name="description" content="Join Slyce and explore opportunities to invest in fractional property ownership.">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="pageContent">
+
+        <!-- Hero Header -->
+        <div class="container my-5">
+            <p class="text-center text-muted fs-5 fw-light p-5">
+                At Slyce, we believe in quality over quantity. 
+                That's why we've built a focused team of talented professionals, each bringing unique skills and perspectives to the table. 
+                Together, we're committed to making property investment simpler, smarter, and more accessible.
+            </p>
+        </div>
+
+        <!-- Meet the Team -->
+        <div class="container my-5">
+            <div class="row g-4 justify-content-center">
+
+                <!-- Jorge -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm team-card text-center">
+                        <img src="{% static 'jorge-shot.png' %}" alt="Jorge Campuzano">
+                        <div class="card-body">
+                            <h3 class="card-title brand-text-primary mb-1">Jorge Campuzano</h3>
+                            <p class="text-muted fw-semibold mb-3">CEO</p>
+                            <p class="card-text text-start fw-light">
+                                With over 18 years of legal experience in Mexico, Jorge specialised in Mergers & Acquisitions, 
+                                Corporate Law, Banking & Finance, and Compliance.  
+                                He later transitioned into Australian real estate, where his expertise and leadership continue to thrive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Franco -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm team-card text-center">
+                        <img src="{% static 'Franco.png' %}" class="card-img-top team-img" alt="Franco Torres">
+                        <div class="card-body">
+                            <h3 class="card-title brand-text-primary mb-1">Franco Torres</h3>
+                            <p class="text-muted fw-semibold mb-3">Head Of Growth & CMO</p>
+                            <p class="card-text text-start fw-light">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm team-card text-center">
+                    <img src="{% static 'David.png' %}" class="card-img-top team-img" alt="David">
+                        <div class="card-body">
+                            <h3 class="card-title brand-text-primary mb-1">David</h3>
+                            <p class="text-muted fw-semibold mb-3">Head of Investments</p>
+                            <p class="card-text text-start fw-light">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

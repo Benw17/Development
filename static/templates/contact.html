@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+
+    {% if data %}
+
+        <title>{{ data.title }}</title>
+        <meta name="description" content="{{ data.description }}">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    
+    {% else %}
+
+        <title>Slyce</title>
+        <meta name="description" content="Join Slyce and explore opportunities to invest in fractional property ownership.">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% endif %}
+
+{% endblock %}
+
+
+{% block body %}
+
+    <div id="pageContent">
+        <!-- Contact Header -->
+        <div class="container text-center my-5">
+            <h1 class="brand-text-primary">Contact Us</h1>
+            <p class="text-muted lead">We'd love to hear from you. Reach out and we'll get back to you soon.</p>
+        </div>
+
+        <!-- Contact Form & Info -->
+        <div class="container my-5">
+            <div class="row g-4">
+
+                <!-- Contact Form -->
+                <div class="col-md-7">
+                    <div class="card shadow-sm rounded-4 p-4">
+                        <h4 class="brand-text-primary mb-3">Send us a message</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn investor-btn float-end">Send Message</button>
+                        </form>
+                    </div>
+                    <p class="text-muted text-center small mt-3">
+                        *We'll only use your details to respond to your enquiry. Your data is secure and will never be shared.
+                    </p>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-md-5">
+                    <div class="card shadow-sm rounded-4 p-4">
+                        <h4 class="brand-text-primary mb-3">Get in touch</h4>
+                        <p class="text-muted">You can also reach us directly via the details below:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="bi bi-envelope-fill brand-text-secondary me-2"></i>
+                                <strong>Email:</strong> support@slyce.com
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-telephone-fill brand-text-secondary me-2"></i>
+                                <strong>Phone:</strong> +61 400 123 456
+                            </li>
+                            <li>
+                                <i class="bi bi-geo-alt-fill brand-text-secondary me-2"></i>
+                                <strong>Address:</strong> Melbourne, Victoria, Australia
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

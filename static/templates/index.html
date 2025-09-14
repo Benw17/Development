@@ -1,0 +1,311 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block head %}
+
+    {% if data.title %}
+
+        <title>{{ data.title }}</title>
+        <meta name="description" content="{{ data.description }}">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% else %}
+
+        <title>Slyce</title>
+        <meta name="description" content="Join Slyce and explore opportunities to invest in fractional property ownership.">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+<div id="pageContent">
+    <!-- Hero Section -->
+    <div class="container">
+        <div id="hero-text" class="row justify-content-around align-items-center bg-light">
+            <div class="col-md-4 text-center">
+                <div>
+                    <h1 class="brand-text-primary">The modern way</h1>
+                    <h1 class="mb-5 brand-text-secondary">to invest.</h1>
+                </div>
+                <p class="lead">Understanding the housing crisis through different perspectives.</p>
+            </div>
+            <div class="col-md-4 mb-4 pt-5">
+                <div class="raise card-hero-width card shadow-lg rounded-4 overflow-hidden mx-auto">
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge brand-bg-secondary fs-6">Featured</span>
+                    </div>
+                    <img src="{% static 'house.png' %}" class="card-img-top" alt="Modern 4-bedroom house in Portsea, Victoria for fractional property investment">
+                    <div class="card-body">
+                        <h5 class="card-title brand-text-primary pb-1 pt-2 fw-bold">Modern 4-Bedroom</h5>
+                        <p class="card-text text-muted mb-3"><i class="bi bi-geo-alt-fill"></i> Portsea, Victoria</p>
+                        <dl class="row mb-4 small">
+                            <dt class="col-6 text-muted">Valuation</dt>
+                            <dd class="col-6 text-end fw-bold">$500,000</dd>
+
+                            <dt class="col-6 text-muted">Rental Yield</dt>
+                            <dd class="col-6 text-end fw-bold">4.5% / Year</dd>
+
+                            <dt class="col-6 text-muted">Cheapest Slyce</dt>
+                            <dd class="col-6 text-end fw-bold">$24.89</dd>
+                        </dl>
+
+                        <div class="container">
+                            <a type="button" class="btn investor-btn w-100" href="#">
+                                <img src="{% static 'slyce-logo.png' %}" alt="Slyce Logo" class="ls-30 pr-3">
+                                <span href="#">More Info</span>
+                            </a> 
+                        </div>
+                    </div>
+                </div>            
+                <p class="text-muted disclaimer text-center mt-2">
+                    *This display is for informational purposes only. Features, images, and pricing may differ from the final product.
+                </p>
+            </div>                        
+        </div>
+    </div> 
+
+    <!-- Body Background Section -->
+    <div id="body-bg" class="d-flex text-center justify-content-center my-1"> 
+        <div class="container my-5"> 
+            <p class="lead text-center text-muted mb-5 fs-5"> A simple, transparent way to create wealth for our investors. </p> 
+            <div class="row text-center">
+                <div class="col-md-4 mb-4"> 
+                    <div class="bg-white p-4 border rounded shadow-sm h-100"> 
+                        <div class="mb-3"> 
+                            <i class="bi bi-building display-4 brand-text-secondary"></i> 
+                        </div>
+                        <h5 class="brand-text-primary">1. Fractional Property Investment</h5> 
+                        <p class="text-muted"> We meticulously select properties using advanced market insights, assess their commercial value and leasing potential, then segment them into 0.1 square meter fractions. </p> 
+                    </div> 
+                </div> 
+                <div class="col-md-4 mb-4"> 
+                    <div class="bg-white p-4 border rounded shadow-sm h-100"> 
+                        <div class="mb-3"> 
+                            <i class="bi bi-cart display-4 brand-text-secondary"></i> 
+                        </div> 
+                        <h5 class="brand-text-primary">2. Find Your Square Metre</h5> 
+                        <p class="text-muted"> Explore the available square meters for sale, assess their market trends and projections, and select the ones aligning with your needs and investment preferences. </p> 
+                    </div> 
+                </div> 
+                <div class="col-md-4 mb-4"> 
+                    <div class="bg-white p-4 border rounded shadow-sm h-100"> 
+                        <div class="mb-3"> 
+                            <i class="bi bi-graph-up display-4 brand-text-secondary"></i> 
+                        </div> 
+                        <h5 class="brand-text-primary">3. Invest & Track</h5> 
+                        <p class="text-muted"> Buy the square meters you see fit and monitor their behaviour. </p> 
+                    </div> 
+                </div> 
+                <div class="col-md-4 mb-4 mx-auto"> 
+                    <div class="bg-white p-4 border rounded shadow-sm h-100"> 
+                        <div class="mb-3"> 
+                            <i class="bi bi-wallet2 display-4 brand-text-secondary"></i> 
+                        </div> 
+                        <h5 class="brand-text-primary">4. Collect Your Share</h5> 
+                        <p class="text-muted"> Receive a share of the net rental income corresponding to the number of square meters you possess. </p> 
+                    </div> 
+                </div> 
+
+                <div class="col-md-4 mb-4 mx-auto"> 
+                    <div class="bg-white p-4 border rounded shadow-sm h-100"> 
+                        <div class="mb-3"> 
+                            <i class="bi bi-cash-stack display-4 brand-text-secondary"></i> 
+                        </div> 
+                        <h5 class="brand-text-primary">5. Cash In On Value</h5> 
+                        <p class="text-muted"> Gain capital returns based on property price fluctuations upon selling your square meters. </p> 
+                    </div> 
+                </div> 
+            </div>             
+            <div>
+                <img src="{% static 'slyce-logo.png' %}" alt="Slyce logo" class="ls-40">
+            </div>
+        </div> 
+    </div>
+
+    <!-- Slyce vs Traditional Property -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card raise border shadow-lg h-100">
+                    <div class="card-header brand-bg-secondary brand-text-primary text-center fw-bold">
+                        Investing with Slyce
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Begin investing from as little as <strong>$25</strong> per Slyce</li>
+                            <li class="list-group-item">Build a diversified portfolio across multiple properties</li>
+                            <li class="list-group-item">Access greater liquidity with faster resale options</li>
+                            <li class="list-group-item">Professional property management handled by Slyce</li>
+                            <li class="list-group-item">Mitigate risk through fractional ownership</li>
+                            <li class="list-group-item">Simple, digital onboarding with no ongoing maintenance required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card raise border shadow-sm h-100">
+                    <div class="card-header brand-text-primary text-center fw-bold">
+                        Buying Your Own Property
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Requires an upfront deposit of <strong>$100k+</strong></li>
+                            <li class="list-group-item">Exposure limited to a single property</li>
+                            <li class="list-group-item">Lengthy selling process, often 3–6 months</li>
+                            <li class="list-group-item">Ongoing responsibility for tenants, repairs, and maintenance</li>
+                            <li class="list-group-item">Concentrated risk tied to one asset</li>
+                            <li class="list-group-item">Significant time and effort required for management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Trust And Protections Section -->
+    <div class="py-5">
+        <div class="container">
+            <div class="text-center brand-text-primary py-5 mb-4">
+                <h2>Reliable. Transparent. Secure.</h2>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold brand-text-primary">Introducing Tokenization</h5>
+                    <p>Our platform leverages tokenization to simplify real estate ownership. Each property is transformed into digital tokens, giving investors a convenient, accessible entry point. Tokens increase in value according to property performance.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold brand-text-primary">Robust Trust Structures</h5>
+                    <p>Each property is assigned to a dedicated trust, creating a secure framework to safeguard investor interests. By purchasing a beneficial interest in these trusts, investors gain ownership rights with legal protections.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold brand-text-primary">Investor Protections</h5>
+                    <ul>
+                        <li>Insulation from liabilities — personal assets remain separate.</li>
+                        <li>Enhanced legal safeguards for ownership rights.</li>
+                        <li>Transparent, real-time monitoring of asset performance.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center">
+                <p class="lead">By combining tokenization with trust structures, our platform offers a modern investment solution that is convenient, secure, and transparent.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Waitlist Form -->
+    <div class="container my-5 p-5 bg-light rounded-4 shadow-sm text-center">
+        <h3 class="fw-bold brand-text-primary mb-3">Join the Slyce Waitlist</h3>
+        <p class="text-muted mb-4">Be the first to invest in fractional property opportunities.</p>
+        <form class="d-flex justify-content-center gap-2 flex-wrap">
+            <input type="email" class="form-control w-auto" placeholder="you@example.com" required>
+            <a type="submit" class="btn investor-btn">
+                <i class="bi bi-send-fill me-2"></i> 
+                Join Waitlist
+            </a>
+        </form>
+    </div>
+
+    <!-- Accordion Section -->
+    <div class="container">
+        <div class="accordion my-5" id="faqAccordion">
+            <!-- How Our Trusts Work -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTrusts">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrusts" aria-expanded="false" aria-controls="collapseTrusts">
+                        How Your Slyce Investment is Secured
+                    </button>
+                </h2>
+                <div id="collapseTrusts" class="accordion-collapse collapse" aria-labelledby="headingTrusts" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>At Slyce, every property is held in a <strong>trust</strong> to protect investors and ensure fair distribution of rental income and growth. When you purchase a Slyce, you become a <strong>beneficiary</strong> of that trust. This trusted legal structure is widely used in property and business, giving you confidence that your investment is secure, transparent, and compliant.</p>
+                        <ul>
+                            <li><strong>The Trust</strong> - property is held separately for investors.</li>
+                            <li><strong>The Trustee</strong> - Slyce manages compliance, tenants, and property.</li>
+                            <li><strong>The Beneficiaries</strong> - investors earn rental income + capital growth.</li>
+                        </ul>
+                        <p class="fw-bold text-center mt-3">You invest → The Trust owns → Slyce manages → You earn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fees And Commissions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFees">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFees" aria-expanded="false" aria-controls="collapseFees">
+                        Slyce's Fees & Commissions
+                    </button>
+                </h2>
+                <div id="collapseFees" class="accordion-collapse collapse" aria-labelledby="headingFees" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Management Fee:</strong> A 6% fee on rental income, covering tenant management, property maintenance, and trust administration.</li>
+                            <li><strong>Transaction Fees:</strong> A 2% fee applies when purchasing Slyces and a 2% fee when selling. This structure is designed to encourage long-term investing and help maximize compounding returns.</li>
+                            <li><strong>Transparent Pricing:</strong> All fees are clearly disclosed upfront — no hidden charges or surprises.</li>
+                        </ul>
+                        <p class="mt-3 text-muted">We keep fees simple and transparent so you always know where your money goes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selling Slyces -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSell">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSell" aria-expanded="false" aria-controls="collapseSell">
+                        Selling Your Slyce's
+                    </button>
+                </h2>
+                <div id="collapseSell" class="accordion-collapse collapse" aria-labelledby="headingSell" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>You can sell your Slyces directly through our platform. Once you decide to sell, your Slyces are listed on our marketplace for other investors to purchase.</p>
+                        <ul>
+                            <li><strong>Flexibility:</strong> Sell part or all of your holdings.</li>
+                            <li><strong>Timing:</strong> Sales are subject to market demand — typically faster than selling a whole property.</li>
+                            <li><strong>Value:</strong> Your sale price is based on the most recent property valuation and market activity.</li>
+                            <li><strong>Returns:</strong> If the property has grown in value, you keep the capital gains when selling.</li>
+                        </ul>
+                        <p>This means you don't need to wait months or deal with agents — you can exit your investment when it suits you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFAQ">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseFAQ">
+                        Frequently Asked Questions
+                    </button>
+                </h2>
+                <div id="collapseFAQ" class="accordion-collapse collapse" aria-labelledby="headingFAQ" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li class="pt-1 pb-1"><strong>How do I receive rental income?</strong> Rental income is deposited monthly based on the number of Slyces you hold.</li>
+                            <li class="pt-1 pb-1"><strong>What happens if a property is vacant?</strong> Vacancies are managed professionally to minimize downtime. Income may temporarily reduce.</li>
+                            <li class="pt-1 pb-1"><strong>Can I sell my Slyces at any time?</strong> Yes, you can list your Slyces for sale on the platform. Liquidity depends on demand.</li>
+                            <li class="pt-1 pb-1"><strong>How are properties selected?</strong> Each property undergoes due diligence, professional valuation, and rental yield analysis.</li>
+                            <li class="pt-1 pb-1"><strong>What legal protections do I have?</strong> All properties are held in trust structures to protect investors and keep assets secure.</li>
+                            <li class="pt-1 pb-1"><strong>Are there risks involved?</strong> Yes, as with all investments. Slyce reduces this risk through diversification.</li>
+                            <li class="pt-1 pb-1"><strong>Do I need to handle tenants or repairs?</strong> No, Slyce manages everything, covered by the management fee.</li>
+                            <li class="pt-1 pb-1"><strong>Is my investment liquid?</strong> More liquid than owning outright, but not instant. Sales typically complete within days to weeks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Roadmap -->
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold brand-text-primary">Our Roadmap</h2>
+            <p class="text-muted">A clear path for how Slyce is building the future of property investment.</p>
+        </div>
+        <img src="{% static 'roadmap.png' %}" alt="Slyce Future Roadmap" class="img-fluid rounded shadow-lg">
+    </div>
+</div>
+{% endblock %}

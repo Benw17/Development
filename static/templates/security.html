@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+
+    {% if data %}
+
+        <title>{{ data.title }}</title>
+        <meta name="description" content="{{ data.description }}">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    
+    {% else %}
+
+        <title>Slyce</title>
+        <meta name="description" content="Join Slyce and explore opportunities to invest in fractional property ownership.">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="pageContent">
+
+
+    </div>
+
+{% endblock %}

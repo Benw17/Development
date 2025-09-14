@@ -1,0 +1,168 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+
+    {% if data %}
+
+        <title>{{ data.title }}</title>
+        <meta name="description" content="{{ data.description }}">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% else %}
+
+        <title>Slyce</title>
+        <meta name="description" content="Join Slyce and explore opportunities to invest in fractional property ownership.">
+        <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div id="pageContent">
+        <!-- Hero Section -->
+        <div class="container text-center py-5">
+            <h1 class="fw-bold brand-text-primary">Invest in the Future of Property Ownership</h1>
+            
+            <p class="lead text-muted">Slyce is redefining property investment through fractional ownership. We're opening the door for visionary angel investors to join our journey.</p>
+            <a type="button" class="btn investor-btn py-2 my-5" href="{% url 'contact' %}">
+                Contact
+            </a> 
+        </div>
+
+        <!-- Problem And Solution -->
+        <div class="container my-5">
+            <div class="row align-items-center text-center text-md-start">
+                
+                <!-- Problem -->
+                <div class="col-md-6 mb-4">
+                    <div class="p-3 d-flex flex-column justify-content-center">
+                        <h2 class="fw-bold brand-text-primary mb-3">The Problem</h2>
+                        <ul class="list-unstyled text-muted small mb-3">
+                        <li class="mb-2"><i class="bi bi-door-closed brand-text-secondary me-2"></i> High entry barriers</li>
+                        <li class="mb-2"><i class="bi bi-lock brand-text-secondary me-2"></i> Limited liquidity</li>
+                        <li class="mb-2"><i class="bi bi-house brand-text-secondary me-2"></i> Complex management</li>
+                        </ul>
+                        <p class="text-muted small">
+                        Millions of Australians are locked out of property investment or exposed to concentrated risk in a single asset.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution -->
+                <div class="col-md-6 mb-4">
+                    <div class="p-3 d-flex flex-column justify-content-center">
+                        <h2 class="fw-bold brand-text-primary mb-3">Our Solution</h2>
+                        <ul class="list-unstyled text-muted small mb-3">
+                        <li class="mb-2"><i class="bi bi-graph-up brand-text-secondary me-2"></i> Fractional ownership with trust structures</li>
+                        <li class="mb-2"><i class="bi bi-layers brand-text-secondary me-2"></i> Build diversified property portfolios</li>
+                        <li class="mb-2"><i class="bi bi-cash-coin brand-text-secondary me-2"></i> Start with as little as <strong>$25</strong></li>
+                        </ul>
+                        <p class="text-muted small">
+                        Slyce makes real estate accessible, reducing barriers while empowering investors with flexibility and diversification.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <hr class="border brand-border border-5 rounded my-5">
+        </div>
+
+
+        <!-- Market Insights -->
+        <div class="container my-5 text-center py-5">
+            <h2 class="brand-text-primary fw-bold">The Market Reality</h2>
+            <p class="text-muted">Data from the ATO, ABS, and CoreLogic highlights both the risks of traditional investing and the opportunity for disruption.</p>
+
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <h3 class="brand-text-primary fw-bold">20%</h3>
+                    <p class="small text-muted">Only 20% of taxpayers invest in property. <br>80% remain locked out.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="brand-text-primary fw-bold">71%</h3>
+                    <p class="small text-muted">Most investors own just <strong>1 property</strong>, concentrating risk.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="brand-text-primary fw-bold">0.87%</h3>
+                    <p class="small text-muted">Less than 1% of investors own 5+ properties. Diversification is rare.</p>
+                </div>
+            </div>
+
+            <!-- Investor Demographics -->
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <h6 class="brand-text-primary fw-bold">Investor Demographics</h6>
+                    <p class="small text-muted">
+                    Average age: <strong>42</strong> <br>
+                    Average salary: <strong>$103,200</strong> <br>
+                    Investment horizon: <strong>20 years</strong> — returns often align with retirement.
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h6 class="brand-text-primary fw-bold">Wealth Gap</h6>
+                    <p class="small text-muted">
+                    Property values rose <strong>193.1%</strong> (2001-2021). <br>
+                    Wages grew only <strong>81.7%</strong>. <br>
+                    Property prices are accelerating faster than income growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Now -->
+        <div class="container my-5 text-center">
+            <p class="text-muted">With property values outpacing wages and traditional investing models under strain, the need for alternative, accessible investment platforms has never been greater.</p>
+            <hr class="border brand-border border-5 rounded my-5">
+        </div>
+
+        <!-- Business Model -->
+        <div class="container my-5 text-center">
+            <h2 class="brand-text-primary fw-bold">Our Business Model</h2>
+            <p class="text-muted">Slyce generates scalable, recurring revenue through aligned incentives.</p>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="p-3 border rounded-3 shadow-sm">
+                        <h6 class="brand-text-primary fw-bold"><i class="bi bi-people brand-text-secondary" alt="Slyce Mangement Fee Icon"></i> Management Fees</h6>
+                        <p class="small text-muted">Recurring income tied to property performance and investor reporting.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="p-3 border rounded-3 shadow-sm">
+                        <h6 class="brand-text-primary fw-bold"><i class="bi bi-arrow-left-right brand-text-secondary" alt="Slyce Transaction Fee Icon"></i> Transaction Fees</h6>
+                        <p class="small text-muted">Sustainable revenue from investor activity on the platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investment Opportunity -->
+        <div class="container my-5 text-center">
+            <h2 class="fw-bold brand-text-primary">The Investment Opportunity</h2>
+            <p class="text-muted">We are raising capital to expand operations, acquire properties, and scale our platform.</p>
+            <ul class="brand-text-primary list-unstyled mt-3 small">
+                <li><i class="bi bi-dash-lg brand-text-secondary"></i> Expand technology and platform development</li>
+                <li><i class="bi bi-dash-lg brand-text-secondary"></i> Acquire and list initial portfolio properties</li>
+                <li><i class="bi bi-dash-lg brand-text-secondary"></i> Scale marketing and user acquisition</li>
+            </ul>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="container my-5 text-center">
+            <p class="text-muted small">
+            *This page is for informational purposes only and does not constitute a public offering. Investments in early-stage companies involve risk, including illiquidity and potential loss of capital. Please request our investor deck for detailed disclosures.*
+            </p>
+        </div>
+
+        <!-- Final Call To Action And Contact Link -->
+        <div class="container text-center my-5">
+            <h2 class="fw-bold brand-text-primary my-5">Partner with Slyce</h2>            
+            <a type="button" class="btn investor-btn py-2 mb-3" href="{% url 'contact' %}">
+                Contact
+            </a> 
+            <p class="text-muted">Interested in joining Slyce as an investor? Request our deck or schedule a call with our founders today.</p>
+        </div>
+    </div>
+
+{% endblock %}
