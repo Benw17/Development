@@ -21,6 +21,17 @@
     --badge-bg: var(--secondary);
 }
 
+.font {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.font-nav {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
 .badge {
     background-color: var(--badge-bg);
     color: var(--secondary-text);
@@ -37,6 +48,10 @@
     border-radius: 10px;
 }
 
+.ls-20 {
+    height: 20px;
+}
+
 .ls-30 {
     height: 30px;
 
@@ -44,6 +59,18 @@
 
 .ls-40 {
     height: 40px;
+}
+
+.cs-soon {
+    letter-spacing: 1px;
+}
+
+.slyce-sign-up {
+    letter-spacing: 2px;
+}
+
+.cont-size {
+    max-width: 600px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -60,6 +87,18 @@
     box-shadow: 10px 5px 5px var(--card-shadow) !important;
 }
 
+.card-card-div {
+    height: 100px;
+    background-color: var(--primary-text);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
 .card:hover {
     box-shadow: 10px 5px 5px var(--card-shadow) !important;
 }
@@ -68,9 +107,17 @@
     width: 20rem;
 }
 
+.raise {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .raise:hover {
-    transform: translateY(-10px);
-    transition: transform 0.5s;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .blurred {
@@ -119,6 +166,10 @@
 
 .msw {
     max-width: 25rem;
+}
+
+.brand-text-white {
+ color: var(--primary-text);
 }
 
 .brand-text-primary {
@@ -205,25 +256,22 @@
 }
 
 .investor-btn {
-  background: var(--secondary);
-  color: var(--primary-text);
-  font-weight: 600;
-  border: 1px solid var(--primary);
-  border-radius: 12px; 
-  padding: 0.75rem 1.75rem;
-  box-shadow: 0 3px 8px var(--card-shadow);
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
+    color: var(--secondary);
+    background-color: var(--card-bg);
+    border: 1px solid var(--secondary);
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .investor-btn:hover {
-  background: transparent;
-  color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px var(--card-shadow);
+    background-color: var(--secondary);
+    color: var(--primary-text);
+
 }
 
 .investor-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px var(--card-shadow);
+
 }

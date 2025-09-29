@@ -24,41 +24,51 @@
 
 <div id="pageContent">
     <!-- Hero Section -->
-    <div class="container">
+    <div class="container pt-2">
         <div id="hero-text" class="row justify-content-around align-items-center bg-light">
             <div class="col-md-6 text-center">
+               
                 <h1 class="brand-text-primary">Unlocking the potential to invest in <span class="brand-text-secondary">Real Estate.</span></h1>
                 <p class="lead text-muted">Providing a simpler way to invest, bypassing the traditional roadblocks.</p>
             </div>
             <div class="col-md-6 mb-4 pt-5">
-                <div class="raise card-hero-width card shadow-lg rounded-4 overflow-hidden mx-auto">
-                    <div class="position-absolute top-0 end-0 m-3">
-                        <span class="badge brand-bg-secondary fs-6">Featured</span>
+                <div class="raise card-hero-width card shadow-lg rounded-2 overflow-hidden mx-auto">
+                    <div class="text-center brand-bg-secondary py-2">
+                        <h6 class="fw-bold m-0"><img src="{% static 'slyce-logo.png' %}" alt="Slyce logo" class="font ls-30 mx-auto">12 Redrock Drive, Portsea, VIC</h6>
                     </div>
-                    <img src="{% static 'house.png' %}" class="card-img-top" alt="Modern 4-bedroom house in Portsea, Victoria for fractional property investment">
+                    <img src="{% static 'house.png' %}" alt="Modern 4-bedroom house in Portsea, Victoria for fractional property investment">
                     <div class="card-body">
-                        <h5 class="card-title brand-text-primary pb-1 pt-2 fw-bold">Modern 4-Bedroom</h5>
-                        <p class="card-text text-muted mb-3"><i class="bi bi-geo-alt-fill"></i> Portsea, Victoria</p>
-                        <dl class="row mb-4 small">
-                            <dt class="col-6 text-muted">Valuation</dt>
-                            <dd class="col-6 text-end fw-bold">$500,000</dd>
-
-                            <dt class="col-6 text-muted">Rental Yield</dt>
-                            <dd class="col-6 text-end fw-bold">4.5% / Year</dd>
-
-                            <dt class="col-6 text-muted">Cheapest Slyce</dt>
-                            <dd class="col-6 text-end fw-bold">$24.89</dd>
-                        </dl>
-
-                        <div class="container">
-                            <a type="button" class="btn investor-btn w-100" href="#">
-                                <img src="{% static 'slyce-logo.png' %}" alt="Slyce Logo" class="ls-30 pr-3">
-                                <span href="#">More Info</span>
-                            </a> 
+                        <div class="row gx-2">
+                            <div class="col">
+                                <div class="card-card-div d-flex flex-column align-items-center justify-content-center text-center p-3">
+                                    <h6 class="text-muted mb-1">Your Slyces</h6>                            
+                                    <h5 class="fw-bold brand-text-secondary mb-0">36</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card-card-div d-flex flex-column align-items-center justify-content-center text-center p-3">
+                                    <h6 class="text-muted mb-1">Ownership</h6>
+                                    <h5 class="fw-bold brand-text-secondary mb-0">0.52%</h5>
+                                </div>
+                            </div>
                         </div>
+                        <div class="row gx-2 mt-2">
+                            <div class="col">
+                                <div class="card-card-div d-flex flex-column align-items-center justify-content-center text-center p-3">
+                                    <h6 class="text-muted mb-1 text-nowrap">Monthly Yield</h6>
+                                    <h5 class="fw-bold brand-text-secondary mb-0">$31.24</h5>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card-card-div d-flex flex-column align-items-center justify-content-center text-center p-3">
+                                    <h6 class="text-muted mb-1 text-nowrap">Shares Value</h6>
+                                    <h5 class="fw-bold brand-text-secondary mb-0">$4049.28</h5>
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                 </div>            
-                <p class="text-muted disclaimer text-center mt-2">
+                <p class="text-muted disclaimer text-center mt-2 fw-light">
                     *This display is for informational purposes only. Features, images, and pricing may differ from the final product.
                 </p>
             </div>                        
@@ -132,10 +142,10 @@
                         Investing with Slyce
                     </div>
                     <div class="card-body">
-                        <ul class="list-group">
+                        <ul class="list-group text-center">
                             <li class="list-group-item">No credit scores</li>
                             <li class="list-group-item">No mortgage or credit to pay</li>
-                            <li class="list-group-item">Buy as little as <strong>0.1m<sup>2</sup></strong> upfront</li>
+                            <li class="list-group-item">Buy as little as 0.1m<sup>2</sup> upfront</li>
                             <li class="list-group-item">Build a diversified portfolio across multiple properties</li>
                             <li class="list-group-item">Easily liquidate your assets</li>
                             <li class="list-group-item">Invest, sit back, and enjoy</li>
@@ -149,7 +159,7 @@
                         Buying Your Own Property
                     </div>
                     <div class="card-body">
-                        <ul class="list-group">
+                        <ul class="list-group text-center">
                             <li class="list-group-item">Credit score needed</li>
                             <li class="list-group-item">Mortgage for up to 20 years</li>
                             <li class="list-group-item">Minimum 20% downpayment</li>
@@ -172,15 +182,15 @@
             </div>
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <h5 class="fw-bold brand-text-primary">Introducing Tokenization</h5>
+                    <h5 class="fw-bold brand-text-primary text-center">Introducing Tokenization</h5>
                     <p>Our platform leverages tokenization to simplify real estate ownership. Each property is transformed into digital tokens, giving investors a convenient, accessible entry point. Tokens increase in value according to property performance.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="fw-bold brand-text-primary">Robust Trust Structures</h5>
+                    <h5 class="fw-bold brand-text-primary text-center">Robust Trust Structures</h5>
                     <p>Each property is assigned to a dedicated trust, creating a secure framework to safeguard investor interests. By purchasing a beneficial interest in these trusts, investors gain ownership rights with legal protections.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="fw-bold brand-text-primary">Investor Protections</h5>
+                    <h5 class="fw-bold brand-text-primary text-center">Investor Protections</h5>
                     <ul>
                         <li>Insulation from liabilities — personal assets remain separate.</li>
                         <li>Enhanced legal safeguards for ownership rights.</li>
@@ -191,18 +201,26 @@
         </div>
     </div>
 
-    <!-- Waitlist Form -->
-    <div class="container my-5 p-5 bg-light rounded-4 shadow-sm text-center">
-        <h3 class="fw-bold brand-text-primary mb-3">Join the Slyce Waitlist</h3>
-        <p class="text-muted mb-4">Be the first to invest in fractional property opportunities.</p>
-        <form class="d-flex justify-content-center gap-2 flex-wrap">
-            <input type="email" class="form-control w-auto" placeholder="you@example.com" required>
-            <a type="submit" class="btn investor-btn">
-                <i class="bi bi-send-fill me-2"></i> 
-                Join Waitlist
-            </a>
-        </form>
+    <!-- Sign-up -->
+    <div class="container cont-size my-5 p-5 shadow-sm text-center rounded-4 bg-white">
+
+        <h5 class="slyce-sign-up text-uppercase fw-bold brand-text-secondary mb-2">
+            SLYCE
+        </h5>
+
+        <h2 class="fw-bold brand-text-primary mb-3 display-6">
+            COMING SOON
+        </h2>
+
+        <p class="text-muted lead mb-4">
+            Be the first to access exclusive fractional property investments.
+        </p>
+
+        <a type="submit" class="btn btn-lg investor-btn px-5 py-3 shadow-sm">
+            NOTIFY ME
+        </a>
     </div>
+
 
     <!-- Accordion Section -->
     <div class="container">
