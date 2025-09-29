@@ -83,24 +83,24 @@
 
 .card {
     background-color: var(--card-bg);
-    transition: transform 0.7s ease, box-shadow 0.3s ease;
-    box-shadow: 10px 5px 5px var(--card-shadow) !important;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 12px var(--card-shadow) !important;
+}
+
+.card:hover {
+    box-shadow: 0 12px 20px var(--card-shadow) !important;
 }
 
 .card-card-div {
     height: 100px;
     background-color: var(--primary-text);
     border-radius: 0.75rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .card-title {
     font-size: 1rem;
-}
-
-.card:hover {
-    box-shadow: 10px 5px 5px var(--card-shadow) !important;
 }
 
 .card-hero-width {
@@ -110,14 +110,12 @@
 .raise {
   border-radius: 1rem;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: var(--primary-text);
+  transition: transform 0.5s ease;
 }
 
 .raise:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .blurred {
@@ -136,13 +134,20 @@
     font-size: 0.80rem;
 }
 
-.raise:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
+.enlarge {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--primary-text);
+    transition: transform 0.5s ease;
+    transform-origin: center center;
+}
+
+.enlarge:hover {
+    transform: scale(1.01);
 }
 
 .accordion-button {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .accordion-button:focus {
@@ -179,7 +184,7 @@
 .brand-bg-primary {
     background: var(--primary);
     color: var(--primary-text);
-    transition: background-color 0.6s ease, transform 0.2s ease;
+    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .brand-bg-primary:hover {
@@ -195,12 +200,12 @@
 .brand-bg-secondary {
     background-color: var(--secondary);
     color: var(--secondary-text);
-    box-shadow: 0 3px 6px var(--card-shadow);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px var(--card-shadow);
+    transition: background-color 0.5s ease;
 }
 
 .btn-background {
-    box-shadow: 0 4px 6px var(--card-shadow) !important;
+    box-shadow: 0 4px 12px var(--card-shadow) !important;
 }
 
 .btn-background:active {
@@ -212,7 +217,7 @@
 #faqAccordion .accordion-button {
   background-color: var(--card-bg);
   color: var(--primary);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 #faqAccordion .accordion-button:not(.collapsed):hover,
@@ -269,9 +274,5 @@
 .investor-btn:hover {
     background-color: var(--secondary);
     color: var(--primary-text);
-
-}
-
-.investor-btn:active {
 
 }
